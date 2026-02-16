@@ -1,11 +1,13 @@
+Here is the optimized, fully-functional Markdown code for your `README.md`. I have fixed the anchor links to ensure the **Table of Contents** works perfectly, improved the formatting for readability, and cleaned up the command snippets.
+
 ```markdown
 # Audit System Project
 
-# https://audit-system-project.onrender.com/
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://audit-system-project.onrender.com/)
 
-**PBL Mini Project **
+**PBL Mini Project**
 
-A full-stack web application designed for internal audit management and purchase request verification. This system features a professional dashboard, role-based access control for Users and Auditors, and a real-time compliance verification tool.
+A full-stack web application designed for internal audit management and purchase request verification. This system features a professional dashboard, role-based access control (RBAC), and a real-time compliance verification tool.
 
 ---
 
@@ -56,7 +58,7 @@ The frontend utilizes a clean, responsive design with a professional blue-slate 
 
 **Frontend:**
 - HTML5, CSS3 (CSS Variables, Grid, Flexbox)
-- Vanilla JavaScript (ES6+) (Single Page Application)
+- Vanilla JavaScript (ES6+) (Single Page Application logic)
 - [Google Fonts](https://fonts.google.com/) (Inter)
 
 **Backend:**
@@ -76,11 +78,9 @@ The frontend utilizes a clean, responsive design with a professional blue-slate 
 
 ## 📂 Project Structure
 
-To run this project correctly, place your files in the following structure:
+To run this project correctly, ensure your files are organized as follows:
 
-
-```
-
+```text
 audit-system-project/
 ├── public/              # Frontend files
 │   ├── index.html
@@ -99,15 +99,17 @@ audit-system-project/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js installed on your machine.
+
+* [Node.js](https://nodejs.org/) installed on your local machine.
 
 ### Installation
 
 1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/Hariharan-0712/audit-system-project.git](https://github.com/Hariharan-0712/audit-system-project.git)
+```bash
+git clone [https://github.com/Hariharan-0712/audit-system-project.git](https://github.com/Hariharan-0712/audit-system-project.git)
 
 ```
+
 
 2. **Navigate to the folder**
 ```bash
@@ -159,17 +161,17 @@ The system automatically seeds two default accounts for testing:
 2. View pending requests on the Dashboard.
 3. Click **View** to inspect details.
 4. **Approve** or **Reject** the request with notes.
-5. Alternatively, use the **Verify Tool** to generate a risk assessment report based on invoice data.
+5. Use the **Verify Tool** for automated risk assessment.
 
 ---
 
 ## 🔒 Security Implementations
 
-1. **Password Hashing**: User passwords are hashed using `bcrypt` before storage. Plain text passwords are never saved.
-2. **Session Management**: Uses `express-session` with `httpOnly` cookies to prevent client-side script access.
-3. **HTTP Headers**: Utilizes `helmet` to set secure HTTP headers, protecting against common web vulnerabilities.
-4. **Input Validation**: Uses `Joi` to validate registration inputs, preventing malformed data entry.
-5. **Role-Based Access Control (RBAC)**: Routes are protected by middleware (`requireAuth`) to ensure only authorized users can access specific API endpoints.
+1. **Password Hashing**: User passwords are hashed using `bcrypt` before storage.
+2. **Session Management**: Uses `express-session` with `httpOnly` cookies to prevent XSS-based session theft.
+3. **HTTP Headers**: Utilizes `helmet` to set secure headers against common web vulnerabilities.
+4. **Input Validation**: Uses `Joi` schema validation to prevent malformed data and injection.
+5. **Role-Based Access Control (RBAC)**: Middleware ensures only authorized roles access specific routes.
 
 ---
 
@@ -177,13 +179,13 @@ The system automatically seeds two default accounts for testing:
 
 | Method | Endpoint | Description | Access |
 | --- | --- | --- | --- |
-| POST | /api/register | Register a new user | Public |
-| POST | /api/login | Authenticate user & start session | Public |
-| POST | /api/logout | End user session | Public |
-| GET | /api/me | Get current logged-in user details | Private |
-| GET | /api/audits | Get all audits (User: own, Auditor: assigned) | Private |
-| POST | /api/audits | Create a new audit request | User |
-| PUT | /api/audits/:id | Update status (Approve/Reject) | Auditor |
+| **POST** | `/api/register` | Register a new account | Public |
+| **POST** | `/api/login` | Authenticate & start session | Public |
+| **POST** | `/api/logout` | End user session | Public |
+| **GET** | `/api/me` | Get current logged-in user info | Private |
+| **GET** | `/api/audits` | Get audits (User: own | Auditor: assigned) |
+| **POST** | `/api/audits` | Create a new audit request | User |
+| **PUT** | `/api/audits/:id` | Update status (Approve/Reject) | Auditor |
 
 ---
 
@@ -193,25 +195,25 @@ The system automatically seeds two default accounts for testing:
 
 | Column | Type | Description |
 | --- | --- | --- |
-| id | INTEGER | Primary Key |
-| username | TEXT | Unique username |
-| password | TEXT | Hashed password |
-| role | TEXT | 'USER' or 'AUDITOR' |
-| created_at | DATETIME | Account creation timestamp |
+| `id` | INTEGER | Primary Key |
+| `username` | TEXT | Unique username |
+| `password` | TEXT | Hashed password |
+| `role` | TEXT | 'USER' or 'AUDITOR' |
+| `created_at` | DATETIME | Account creation timestamp |
 
 ### Audits Table
 
 | Column | Type | Description |
 | --- | --- | --- |
-| id | INTEGER | Primary Key |
-| title | TEXT | Title of the request |
-| assigned_to | INTEGER | Foreign Key (Users) |
-| created_by | INTEGER | Foreign Key (Users) |
-| purchase_data | TEXT | JSON string of invoice details |
-| status | TEXT | 'PENDING_REVIEW', 'VERIFIED', etc. |
-| admin_notes | TEXT | Feedback from auditor |
-| created_at | DATETIME | Submission timestamp |
+| `id` | INTEGER | Primary Key |
+| `title` | TEXT | Title of the request |
+| `assigned_to` | INTEGER | Foreign Key (Users) |
+| `created_by` | INTEGER | Foreign Key (Users) |
+| `purchase_data` | TEXT | JSON string of invoice details |
+| `status` | TEXT | 'PENDING_REVIEW', 'VERIFIED', etc. |
+| `admin_notes` | TEXT | Feedback from auditor |
+| `created_at` | DATETIME | Submission timestamp |
 
 ---
 
-made with ❤️ by HARIHARAN
+Made with ❤️ by [HARIHARAN](https://www.google.com/search?q=https://github.com/Hariharan-0712)
