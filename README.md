@@ -1,9 +1,6 @@
-Here is the optimized, fully-functional Markdown code for your `README.md`. I have fixed the anchor links to ensure the **Table of Contents** works perfectly, improved the formatting for readability, and cleaned up the command snippets.
 
-```markdown
 # Audit System Project
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://audit-system-project.onrender.com/)
 
 **PBL Mini Project**
 
@@ -12,15 +9,15 @@ A full-stack web application designed for internal audit management and purchase
 ---
 
 ## 📖 Table of Contents
-- [About The Project](#-about-the-project)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Usage](#-usage)
-- [Security Implementations](#-security-implementations)
-- [API Endpoints](#-api-endpoints)
-- [Database Schema](#-database-schema)
+- [About The Project]
+- [Features]
+- [Tech Stack]
+- [Project Structure]
+- [Getting Started]
+- [Usage]
+- [Security Implementations]
+- [API Endpoints]
+- [Database Schema]
 
 ---
 
